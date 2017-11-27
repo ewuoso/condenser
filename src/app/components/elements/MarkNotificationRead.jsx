@@ -27,5 +27,5 @@ class MarkNotificationRead extends React.Component {
 }
 
 export default connect(null, dispatch => ({
-    update: (payload) => { dispatch({type: 'UPDATE_NOTIFICOUNTERS', payload})},
+    update: (payload) => { dispatch({type: 'app/UPDATE_NOTIFICOUNTERS', payload})},
 }))(MarkNotificationRead);

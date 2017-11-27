@@ -1,8 +1,7 @@
-import React, {Component, PropTypes} from 'react'
-import Tooltip from 'app/components/elements/Tooltip'
-import {connect} from 'react-redux'
-import user from 'app/redux/User'
+import React, {Component, PropTypes} from 'react';
+import {connect} from 'react-redux';
 import tt from 'counterpart';
+import Tooltip from 'app/components/elements/Tooltip';
 
 const {bool, func} = PropTypes
 
@@ -25,18 +24,3 @@ class SaveLogin extends Component {
         )
     }
 }
-// export default connect(
-//     state => {
-//         if (!state.user) return
-//         return {
-//             saveLoginConfirm: state.user.get('saveLoginConfirm'),
-//         }
-//     },
-//     dispatch => ({
-//         no: () => {dispatch(user.actions.saveLoginConfirm(false))},
-//         yes: () => {
-//             dispatch(user.actions.saveLoginConfirm(false))
-//             dispatch(user.actions.saveLogin())
-//         },
-//     })
-// )(SaveLogin)

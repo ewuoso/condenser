@@ -6,9 +6,10 @@ import LoginForm from 'app/components/modules/LoginForm';
 import ConfirmTransactionForm from 'app/components/modules/ConfirmTransactionForm';
 import Transfer from 'app/components/modules/Transfer';
 import SignUp from 'app/components/modules/SignUp';
-import user from 'app/redux/User';
+import * as userActions from 'app/redux/UserReducer';
+import * as appActions from 'app/redux/AppReducer';
+import * as transactionActions from 'app/redux/TransactionReducer';
 import Powerdown from 'app/components/modules/Powerdown';
-import tr from 'app/redux/Transaction';
 import shouldComponentUpdate from 'app/utils/shouldComponentUpdate';
 import {NotificationStack} from 'react-notification';
 import {OrderedSet} from 'immutable';
@@ -100,29 +101,29 @@ export default connect(
     dispatch => ({
         hideLogin: e => {
             if (e) e.preventDefault();
-            dispatch(user.actions.hideLogin())
+            dispatch(userActions.hideLogin())
         },
         hideConfirm: e => {
             if (e) e.preventDefault();
-            dispatch(tr.actions.hideConfirm())
+            dispatch(transactionActions.hideConfirm())
         },
         hideTransfer: e => {
             if (e) e.preventDefault();
-            dispatch(user.actions.hideTransfer())
+            dispatch(userActions.hideTransfer())
         },
         hidePowerdown: e => {
             if (e) e.preventDefault();
-            dispatch(user.actions.hidePowerdown())
+            dispatch(userActions.hidePowerdown())
         },
         hidePromotePost: e => {
             if (e) e.preventDefault();
-            dispatch(user.actions.hidePromotePost())
+            dispatch(userActions.hidePromotePost())
         },
         hideSignUp: e => {
             if (e) e.preventDefault();
-            dispatch(user.actions.hideSignUp())
+            dispatch(userActions.hideSignUp())
         },
         // example: addNotification: ({key, message}) => dispatch({type: 'ADD_NOTIFICATION', payload: {key, message}}),
-        removeNotification: (key) => dispatch({type: 'REMOVE_NOTIFICATION', payload: {key}})
+        removeNotification: (key) => dispatch(appActions.removeNotification({key}))
     })
 )(Modals)
