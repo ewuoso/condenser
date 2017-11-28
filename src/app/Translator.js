@@ -6,8 +6,12 @@ import es from 'react-intl/locale-data/es';
 import ru from 'react-intl/locale-data/ru';
 import fr from 'react-intl/locale-data/fr';
 import it from 'react-intl/locale-data/it';
-import {DEFAULT_LANGUAGE} from 'app/client_config';
 import tt from 'counterpart';
+import config from 'config';
+
+const {
+    DEFAULT_LANGUAGE,
+} = config.client;
 
 addLocaleData([...en, ...es, ...ru, ...fr, ...it]);
 

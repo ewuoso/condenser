@@ -1,6 +1,10 @@
 import React from 'react';
 import tt from 'counterpart';
-import { APP_NAME } from 'app/client_config';
+import config from 'config';
+
+const {
+    APP_NAME,
+} = config.client;
 
 class Support extends React.Component {
     render() {

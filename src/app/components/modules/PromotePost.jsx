@@ -3,8 +3,15 @@ import {connect} from 'react-redux';
 import ReactDOM from 'react-dom';
 import transaction from 'app/redux/Transaction';
 import LoadingIndicator from 'app/components/elements/LoadingIndicator';
-import { DEBT_TOKEN, DEBT_TOKEN_SHORT, CURRENCY_SIGN, DEBT_TICKER} from 'app/client_config';
 import tt from 'counterpart';
+import config from 'config';
+
+const {
+    DEBT_TOKEN,
+    DEBT_TOKEN_SHORT,
+    CURRENCY_SIGN,
+    DEBT_TICKER,
+} = config.client;
 
 class PromotePost extends Component {
 

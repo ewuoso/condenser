@@ -1,7 +1,13 @@
 /* Stub content (or objects) that may be inserted into the UI before being accepted by the blockchain. */
 
 //TODO!
-import { LIQUID_TICKER, DEBT_TICKER } from 'app/client_config'
+import config from 'config';
+
+const {
+    LIQUID_TICKER,
+    DEBT_TICKER,
+} = config.client;
+
 export const emptyContent = {
     fetched: new Date(), /// the date at which this data was requested from the server
     id: '2.8.0',

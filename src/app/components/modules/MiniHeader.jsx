@@ -1,8 +1,11 @@
 import React from 'react';
 import Icon from 'app/components/elements/Icon';
-import { APP_NAME } from 'app/client_config';
+import config from 'config';
+
+const { APP_NAME } = config.client;
 
 export default function MiniHeader() {
+    console.log('CONFIG!', config)
     return <header className="Header">
         <div className="Header__top header">
             <div className="expanded row">

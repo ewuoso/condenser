@@ -12,9 +12,13 @@ import tt from 'counterpart';
 import { localizedCurrency } from 'app/components/elements/LocalizedCurrency';
 import shouldComponentUpdate from 'app/utils/shouldComponentUpdate';
 import {serverApiRecordEvent} from 'app/utils/ServerApiClient';
-import { INVEST_TOKEN_UPPERCASE } from 'app/client_config';
-
 import { isLoggedIn } from 'app/utils/UserUtil';
+import config from 'config';
+
+const {
+    INVEST_TOKEN_UPPERCASE,
+} = config.client;
+
 
 class Post extends React.Component {
 

@@ -6,8 +6,14 @@ import Slider from 'react-rangeslider';
 import transaction from 'app/redux/Transaction';
 import user from 'app/redux/User';
 import tt from 'counterpart'
-import {VEST_TICKER, LIQUID_TICKER, VESTING_TOKEN} from 'app/client_config'
 import {numberWithCommas, spToVestsf, vestsToSpf, vestsToSp, assetFloat} from 'app/utils/StateFunctions'
+import config from 'config';
+
+const {
+    VEST_TICKER,
+    LIQUID_TICKER,
+    VESTING_TOKEN
+} = config.client;
 
 class Powerdown extends React.Component {
 

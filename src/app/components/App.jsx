@@ -17,10 +17,14 @@ import MiniHeader from 'app/components/modules/MiniHeader';
 import tt from 'counterpart';
 import PageViewsCounter from 'app/components/elements/PageViewsCounter';
 import {serverApiRecordEvent} from 'app/utils/ServerApiClient';
-import { APP_NAME, VESTING_TOKEN, LIQUID_TOKEN } from 'app/client_config';
 import {key_utils} from 'steem/lib/auth/ecc';
 import resolveRoute from 'app/ResolveRoute';
 import {VIEW_MODE_WHISTLE} from 'shared/constants';
+import config from 'config';
+
+const {
+    LIQUID_TOKEN
+} = config.client;
 
 const pageRequiresEntropy = (path) => {
     const {page} = resolveRoute(path);

@@ -1,0 +1,4 @@
+{
+    "BABEL_ENV": "browser",
+    "KOA_BABEL_ENV": "server"
+}

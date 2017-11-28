@@ -1,4 +1,8 @@
-import { FRACTION_DIGITS, DEFAULT_CURRENCY } from 'app/client_config';
+import config from 'config';
+
+const {
+    DEFAULT_CURRENCY,
+} = config.client;
 
 let localCurrencySymbol = DEFAULT_CURRENCY;
 let localizedCurrency = (value) => value;

@@ -1,4 +1,14 @@
-import { APP_NAME, LIQUID_TOKEN, LIQUID_TOKEN_UPPERCASE, DEBT_TOKEN, DEBT_TOKEN_SHORT, CURRENCY_SIGN, VESTING_TOKEN } from 'app/client_config';
+import config from 'config';
+
+const {
+    APP_NAME,
+    LIQUID_TOKEN,
+    LIQUID_TOKEN_UPPERCASE,
+    DEBT_TOKEN,
+    DEBT_TOKEN_SHORT,
+    CURRENCY_SIGN,
+    VESTING_TOKEN,
+} = config.client;
 
 // TODO add comments and explanations
 // TODO change name to formatCoinTypes?

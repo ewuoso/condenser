@@ -1,14 +1,15 @@
 import webpack from 'webpack';
 import git from 'git-rev-sync';
 import baseConfig from './base.config';
+import config from 'config';
 
 export default {
     ...baseConfig,
     plugins: [
         new webpack.DefinePlugin({
             'process.env': {
-                BROWSER: JSON.stringify(true),
-                NODE_ENV: JSON.stringify('production'),
+                BROWSER: JSON.stringify(config.get('BROWSER')),
+                NODE_ENV: JSON.stringify(config.util.getEnv('NODE_ENV')),
                 VERSION: JSON.stringify(git.long())
             },
             global: {

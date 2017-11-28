@@ -6,8 +6,13 @@ import g from 'app/redux/GlobalReducer'
 import shouldComponentUpdate from 'app/utils/shouldComponentUpdate'
 import Icon from 'app/components/elements/Icon'
 import tt from 'counterpart';
-import { APP_NAME, APP_ICON } from 'app/client_config';
 import {key_utils} from 'steem/lib/auth/ecc';
+import config from 'config';
+
+const {
+    APP_NAME,
+    APP_ICON,
+} = config.client;
 
 
 const {bool} = React.PropTypes

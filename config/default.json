@@ -99,5 +99,48 @@
   "steemd_connection_client": "wss://steemd.steemit.com",
   "steemd_connection_server": "wss://steemd.steemit.com",
   "chain_id": "0000000000000000000000000000000000000000000000000000000000000000",
-  "address_prefix": "STM"
+  "address_prefix": "STM",
+  "client": {
+    // sometimes it"s impossible to use html tags to style coin name, hence usage of _UPPERCASE modifier
+    "APP_NAME" : "Steemit",
+    // sometimes APP_NAME is written in non-latin characters, but they are needed for technical purposes
+    // ie. "Голос" > "Golos"
+    "APP_NAME_LATIN" : "Steemit",
+    "APP_NAME_UPPERCASE" : "STEEMIT",
+    "APP_ICON" : "steem",
+    // FIXME figure out best way to do this on both client and server from env
+    // vars. client should read $STM_Config, server should read config package.
+    "APP_DOMAIN" : "steemit.com",
+    "LIQUID_TOKEN" : "Steem",
+    // sometimes it"s impossible to use html tags to style coin name, hence usage of _UPPERCASE modifier
+    "LIQUID_TOKEN_UPPERCASE" : "STEEM",
+    "VESTING_TOKEN" : "STEEM POWER",
+    "INVEST_TOKEN_UPPERCASE" : "STEEM POWER",
+    "INVEST_TOKEN_SHORT" : "SP",
+    "DEBT_TOKEN" : "STEEM DOLLAR",
+    "DEBT_TOKENS" : "STEEM DOLLARS",
+    "CURRENCY_SIGN" : "$",
+    "WIKI_URL" : "", // https://wiki.golos.io/
+    "LANDING_PAGE_URL" : "https://steem.io/",
+    "TERMS_OF_SERVICE_URL" : "https://steemit.com/tos.html",
+    "PRIVACY_POLICY_URL" : "https://steemit.com/privacy.html",
+    "WHITEPAPER_URL" : "https://steem.io/SteemWhitePaper.pdf",
+    // these are dealing with asset types, not displaying to client, rather sending data over websocket
+    "LIQUID_TICKER" : "STEEM",
+    "VEST_TICKER" : "VESTS",
+    "DEBT_TICKER" : "SBD",
+    "DEBT_TOKEN_SHORT" : "SBD",
+    // application settings
+    "DEFAULT_LANGUAGE" : "en", // used on application internationalization bootstrap
+    "DEFAULT_CURRENCY" : "USD",
+    "ALLOWED_CURRENCIES" : ["USD"],
+    "FRACTION_DIGITS" : 2, // default amount of decimal digits
+    "FRACTION_DIGITS_MARKET" : 3, // accurate amount of deciaml digits (example: used in market)
+    // meta info
+    "TWITTER_HANDLE" : "@steemit",
+    "SHARE_IMAGE" : "https://steemit.com/images/steemit-share.png",
+    "TWITTER_SHARE_IMAGE" : "https://steemit.com/images/steemit-twshare.png",
+    "SITE_DESCRIPTION" : "Steemit is a social media platform where everyone gets paid for creating and curating content. It leverages a robust digital points system, called Steem, that supports real value for digital rewards through market price discovery and liquidity",
+    "SUPPORT_EMAIL" : "support@steemit.com"
+  }
 }
